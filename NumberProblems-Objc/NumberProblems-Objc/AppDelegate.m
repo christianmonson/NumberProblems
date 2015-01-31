@@ -27,23 +27,23 @@ static int divisor = 6;
 }
 
 -(void)iterateCount:(int) myNumber {
-    int multiplied = [self multiplied:myNumber];
-    float divide = [self divide:myNumber];
+    int product = [self multiplied:myNumber];
+    float divide = [self divided:product];
     NSLog(@"iterate %d", myNumber);
     if (myNumber != 0) {
-        NSLog(@"Multiplied %d by %d to be %d", myNumber, multiple, multiplied);
-        NSLog(@"Divided %d by %d to be %f" , myNumber, divisor, divide);
+        NSLog(@"Multiplied %d by %d to be %d", myNumber, multiple, product);
+        NSLog(@"Divided %d by %d to be %f" , product, divisor, divide);
         myNumber--;
         [self iterateCount:myNumber];
     }
 }
 -(int)multiplied:(int) shaggyDog {
     
-    int quotient = shaggyDog * multiple;
-    return quotient;
+    int product = shaggyDog * multiple;
+    return product;
 }
 
--(float)divide:(float)notAVeryShaggyDog {
+-(float)divided:(float)notAVeryShaggyDog {
     
     float dividend = notAVeryShaggyDog / divisor;
     return dividend;
